@@ -1,0 +1,26 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<use xlink:href="#stroke0_72_384" fill="url(#paint0_radial_72_384)"/>
+<use xlink:href="#stroke0_72_384" fill="url(#paint1_radial_72_384)" fill-opacity="0.2"/>
+<use xlink:href="#stroke0_72_384" fill="url(#paint2_radial_72_384)"/>
+<defs>
+<radialGradient id="paint0_radial_72_384" cx="0" cy="0" r="1" gradientTransform="matrix(-14.897 1.5276 -1.5276 -15.0121 19.2797 8.11042)" gradientUnits="userSpaceOnUse">
+<stop offset="0.320721" stop-color="#7D0AFC"/>
+<stop offset="0.573465" stop-color="#5A15FD"/>
+<stop offset="0.751988" stop-color="#2343FF"/>
+<stop offset="1" stop-color="#12AFFF"/>
+</radialGradient>
+<radialGradient id="paint1_radial_72_384" cx="0" cy="0" r="1" gradientTransform="matrix(-6.63844 7.59765 -7.59765 -6.68972 10.0601 10)" gradientUnits="userSpaceOnUse">
+<stop offset="0.544662" stop-color="white" stop-opacity="0"/>
+<stop offset="0.620634" stop-color="white"/>
+<stop offset="0.905976" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint2_radial_72_384" cx="0" cy="0" r="1" gradientTransform="matrix(-19.3822 -5.38682 5.38682 -19.5319 23.7649 15.0248)" gradientUnits="userSpaceOnUse">
+<stop offset="0.473916" stop-color="#7D0AFC" stop-opacity="0"/>
+<stop offset="0.689721" stop-color="#5A15FD"/>
+<stop offset="0.797681" stop-color="#4923FE" stop-opacity="0.692775"/>
+<stop offset="0.91181" stop-color="#2343FF" stop-opacity="0"/>
+<stop offset="1" stop-color="#12AFFF" stop-opacity="0"/>
+</radialGradient>
+<path id="stroke0_72_384" d="M10.1905 2C14.6013 2 18.0601 5.59159 18.0601 10.0216C18.0601 14.4517 14.4914 17.956 10.2328 17.956C8.72139 17.956 7.98912 17.7424 6.80949 16.9039C6.72826 16.8465 6.61727 16.8614 6.54861 16.9349C5.64129 17.9066 3.3175 18.5889 3.21109 17.2623C3.21109 14.949 2.06006 13.4467 2.06006 9.978C2.06006 5.42391 5.77973 2 10.1905 2ZM10.3141 5.94765C8.22139 5.83739 6.58752 7.29608 6.22711 9.57714C5.92848 11.4666 6.45708 13.7695 6.91018 13.8855C7.1024 13.9349 7.56349 13.5799 7.89987 13.2618C7.96281 13.2021 8.05892 13.1917 8.13214 13.2377C8.65617 13.5593 9.24885 13.8005 9.90216 13.8349C12.0509 13.9475 13.9548 12.2591 14.0681 10.102C14.1802 7.94502 12.4628 6.05907 10.3141 5.94651V5.94765Z"/>
+</defs>
+</svg>
