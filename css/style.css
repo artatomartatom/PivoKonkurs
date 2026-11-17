@@ -7033,24 +7033,47 @@ a.info-row__val:hover {
 
 /* ---------- Партнёрам и сотрудничество ---------- */
 .section--partners-contacts {
-    padding-top: 4rem;
-    padding-bottom: 6rem;
+    position: relative;
+    background: var(--c-dark);
+    color: var(--c-light-light);
+    overflow: hidden;
+}
+
+.section--partners-contacts::before {
+    content: '';
+    position: absolute;
+    right: -14rem;
+    top: -16rem;
+    width: 56rem;
+    height: 56rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(224, 173, 54, .16), transparent 66%);
+    pointer-events: none;
+}
+
+.section--partners-contacts .section__head {
+    margin-bottom: 4rem;
+}
+
+.section--partners-contacts h2 {
+    color: var(--c-gold);
 }
 
 .partners-list {
-    background: var(--c-light-light);
+    position: relative;
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid rgba(255, 255, 255, .1);
     border-radius: var(--radius-l, 2rem);
     padding: 0 3.2rem;
-    box-shadow: var(--shadow-s, 0 4px 20px rgba(0, 0, 0, .04));
 }
 
 .partners-list__row {
     display: grid;
-    grid-template-columns: 1.2fr 1fr auto;
+    grid-template-columns: 1.35fr 1fr 22rem;
     align-items: center;
-    gap: 2.4rem;
-    padding: 2.4rem 0;
-    border-bottom: 1px solid rgba(0, 0, 0, .08);
+    gap: 3.2rem;
+    padding: 2.6rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
 
 .partners-list__row:last-child {
@@ -7061,25 +7084,26 @@ a.info-row__val:hover {
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.35;
-    color: var(--c-dark);
+    color: var(--c-light-light);
 }
 
 .partners-list__note {
     font-size: 1.5rem;
-    color: rgba(0, 0, 0, .48);
+    color: rgba(254, 254, 254, .6);
 }
 
 .partners-list__val {
     font-size: 1.8rem;
     font-weight: 600;
-    color: var(--c-dark);
+    color: var(--c-gold);
+    text-align: right;
     text-decoration: none;
     white-space: nowrap;
-    transition: color .25s var(--ease);
+    transition: opacity .25s var(--ease);
 }
 
 .partners-list__val:hover {
-    color: var(--c-gold);
+    opacity: .8;
 }
 
 .contacts__soc-row .chip-link--light {
@@ -7097,7 +7121,11 @@ a.info-row__val:hover {
     .partners-list__row {
         grid-template-columns: 1fr;
         gap: .6rem;
-        padding: 1.8rem 0;
+        padding: 2rem 0;
+    }
+
+    .partners-list__val {
+        text-align: left;
     }
 }
 
