@@ -3818,7 +3818,10 @@ input, select, textarea {
     height: 7.4rem;
     border-radius: 50%;
     overflow: hidden;
-    background: linear-gradient(155deg, #efeade, #d9d3c4);
+    background-color: #efeade;
+    background-size: cover;
+    background-position: center 14%;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6301,9 +6304,18 @@ a.info-row__val:hover {
     transition: transform .3s var(--ease), background-color .3s var(--ease), color .3s var(--ease);
 }
 
-.float-contact a svg {
+.float-contact a svg,
+.float-contact a img {
     width: 2.4rem;
-    height: 2.4rem
+    height: 2.4rem;
+    display: block;
+}
+
+.float-contact__up {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
 }
 
 .float-contact a:hover {
@@ -7016,6 +7028,104 @@ a.info-row__val:hover {
 
     .legal__body h2 {
         scroll-margin-top: 9rem
+    }
+}
+
+/* ---------- Партнёрам и сотрудничество ---------- */
+.section--partners-contacts {
+    position: relative;
+    background: var(--c-dark);
+    color: var(--c-light-light);
+    overflow: hidden;
+}
+
+.section--partners-contacts::before {
+    content: '';
+    position: absolute;
+    right: -14rem;
+    top: -16rem;
+    width: 56rem;
+    height: 56rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(224, 173, 54, .16), transparent 66%);
+    pointer-events: none;
+}
+
+.section--partners-contacts .section__head {
+    margin-bottom: 4rem;
+}
+
+.section--partners-contacts h2 {
+    color: var(--c-gold);
+}
+
+.partners-list {
+    position: relative;
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: var(--radius-l, 2rem);
+    padding: 0 3.2rem;
+}
+
+.partners-list__row {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr 22rem;
+    align-items: center;
+    gap: 3.2rem;
+    padding: 2.6rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.partners-list__row:last-child {
+    border-bottom: none;
+}
+
+.partners-list__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.35;
+    color: var(--c-light-light);
+}
+
+.partners-list__note {
+    font-size: 1.5rem;
+    color: rgba(254, 254, 254, .6);
+}
+
+.partners-list__val {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--c-gold);
+    text-align: right;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity .25s var(--ease);
+}
+
+.partners-list__val:hover {
+    opacity: .8;
+}
+
+.contacts__soc-row .chip-link--light {
+    border: none;
+    background: transparent;
+    padding-left: 0;
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .partners-list {
+        padding: 0 2rem;
+    }
+
+    .partners-list__row {
+        grid-template-columns: 1fr;
+        gap: .6rem;
+        padding: 2rem 0;
+    }
+
+    .partners-list__val {
+        text-align: left;
     }
 }
 
