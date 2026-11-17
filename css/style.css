@@ -746,8 +746,6 @@ input, select, textarea {
     position: relative;
     display: flex;
     align-items: center;
-    width: 6.8rem;
-    min-width: 6.8rem;
     height: 6.8rem;
 }
 
@@ -5760,12 +5758,6 @@ a.info-row__val:hover {
     margin-bottom: 1.6rem
 }
 
-.logo--footer .logo__img {
-    width: 8.2rem;
-    min-width: 8.2rem;
-    height: 6rem
-}
-
 .logo--footer .logo__flag {
     width: 4rem
 }
@@ -5776,8 +5768,6 @@ a.info-row__val:hover {
 }
 
 .logo--footer .logo__img {
-    width: 9rem;
-    min-width: 9rem;
     height: 5.4rem
 }
 
