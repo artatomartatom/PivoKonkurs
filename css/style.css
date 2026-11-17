@@ -2009,7 +2009,7 @@ input, select, textarea {
 
 .reveal.is-in {
     opacity: 1;
-    transform: none
+    transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -3536,9 +3536,13 @@ input, select, textarea {
 }
 
 .jury {
+    /*
     display: grid;
-    grid-template-columns:repeat(3, minmax(0, 1fr));
-    gap: 2rem
+    grid-template-columns:repeat(3, minmax(0, 1fr));*/
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .person {
@@ -3551,6 +3555,7 @@ input, select, textarea {
     box-shadow: 0 .8rem 2.2rem -.8rem rgba(0, 0, 0, .12);
     overflow: hidden;
     transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+    flex-basis: 22.4em;
 }
 
 .person:hover {
