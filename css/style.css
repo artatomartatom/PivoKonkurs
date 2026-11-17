@@ -1648,7 +1648,7 @@ input, select, textarea {
     content: '';
     position: absolute;
     left: 0;
-    top: -0.1rem
+    top: -0.1rem;
     width: 2.2rem;
     height: 2.2rem;
     border-radius: 50%;
