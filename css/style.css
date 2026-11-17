@@ -3818,7 +3818,10 @@ input, select, textarea {
     height: 7.4rem;
     border-radius: 50%;
     overflow: hidden;
-    background: linear-gradient(155deg, #efeade, #d9d3c4);
+    background-color: #efeade;
+    background-size: cover;
+    background-position: center 14%;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6301,9 +6304,18 @@ a.info-row__val:hover {
     transition: transform .3s var(--ease), background-color .3s var(--ease), color .3s var(--ease);
 }
 
-.float-contact a svg {
+.float-contact a svg,
+.float-contact a img {
     width: 2.4rem;
-    height: 2.4rem
+    height: 2.4rem;
+    display: block;
+}
+
+.float-contact__up {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
 }
 
 .float-contact a:hover {
@@ -7016,6 +7028,58 @@ a.info-row__val:hover {
 
     .legal__body h2 {
         scroll-margin-top: 9rem
+    }
+}
+
+/* ---------- Партнёрам и сотрудничество ---------- */
+.section--partners-contacts {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.partners-list {
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+.partners-list__row {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr auto;
+    align-items: center;
+    gap: 2.4rem;
+    padding: 2.2rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.partners-list__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.35;
+    color: var(--c-dark);
+}
+
+.partners-list__note {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, .48);
+}
+
+.partners-list__val {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--c-dark);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color .25s var(--ease);
+}
+
+.partners-list__val:hover {
+    color: var(--c-gold);
+}
+
+@media (max-width: 768px) {
+    .partners-list__row {
+        grid-template-columns: 1fr;
+        gap: .6rem;
+        padding: 1.8rem 0;
     }
 }
 
