@@ -7033,12 +7033,15 @@ a.info-row__val:hover {
 
 /* ---------- Партнёрам и сотрудничество ---------- */
 .section--partners-contacts {
-    padding-top: 2rem;
-    padding-bottom: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
 }
 
 .partners-list {
-    border-top: 1px solid rgba(0, 0, 0, .1);
+    background: var(--c-light-light);
+    border-radius: var(--radius-l, 2rem);
+    padding: 0 3.2rem;
+    box-shadow: var(--shadow-s, 0 4px 20px rgba(0, 0, 0, .04));
 }
 
 .partners-list__row {
@@ -7046,8 +7049,12 @@ a.info-row__val:hover {
     grid-template-columns: 1.2fr 1fr auto;
     align-items: center;
     gap: 2.4rem;
-    padding: 2.2rem 0;
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    padding: 2.4rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .08);
+}
+
+.partners-list__row:last-child {
+    border-bottom: none;
 }
 
 .partners-list__title {
@@ -7064,7 +7071,7 @@ a.info-row__val:hover {
 
 .partners-list__val {
     font-size: 1.8rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--c-dark);
     text-decoration: none;
     white-space: nowrap;
@@ -7075,7 +7082,18 @@ a.info-row__val:hover {
     color: var(--c-gold);
 }
 
+.contacts__soc-row .chip-link--light {
+    border: none;
+    background: transparent;
+    padding-left: 0;
+    box-shadow: none;
+}
+
 @media (max-width: 768px) {
+    .partners-list {
+        padding: 0 2rem;
+    }
+
     .partners-list__row {
         grid-template-columns: 1fr;
         gap: .6rem;
