@@ -407,15 +407,12 @@ function initDeadlinePopup() {
   var deadline = new Date('2026-12-31T23:59:59+03:00');
 
   var dayEl = pop.querySelector('[data-pop-days]');
-  var hourEl = pop.querySelector('[data-pop-hours]');
 
   function tick() {
     var diff = deadline - new Date();
     if (diff < 0) diff = 0;
     var d = Math.floor(diff / 864e5);
-    var h = Math.floor(diff % 864e5 / 36e5);
     if (dayEl) dayEl.textContent = d;
-    if (hourEl) hourEl.textContent = h;
   }
   tick();
   setInterval(tick, 60000);
