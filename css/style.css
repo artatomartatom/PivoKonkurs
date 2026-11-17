@@ -7063,7 +7063,7 @@ a.info-row__val:hover {
     position: relative;
     background: rgba(255, 255, 255, .04);
     border: 1px solid rgba(255, 255, 255, .1);
-    border-radius: var(--radius-l, 2rem);
+    border-radius: 2rem;
     padding: 0 3.2rem;
 }
 
