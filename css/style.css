@@ -1259,7 +1259,7 @@ input, select, textarea {
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: linear-gradient(180deg, rgba(20, 20, 22, .55) 0%, rgba(20, 20, 22, .35) 45%, rgba(232, 232, 232, 1) 100%);
+    background: linear-gradient(180deg, rgba(20, 20, 22, .55) 0%, rgba(20, 20, 22, .35) 45%, rgba(232, 233, 233, 1) 100%);
 }
 
 .hero__slider {
@@ -1378,9 +1378,11 @@ input, select, textarea {
     background-repeat: no-repeat;
     filter: drop-shadow(0 2.4rem 3.6rem rgba(0, 0, 0, .55));
     animation: float 8s ease-in-out infinite;
+    margin-bottom: 1rem;
 }
 
-.hero__season {
+.hero__season
+{
     position: relative;
     display: inline-block;
     margin-top: -2.4rem;
@@ -1392,14 +1394,42 @@ input, select, textarea {
     color: var(--c-gold);
     text-align: center;
 }
+.X
+{
+    position: relative;
+}
+.X::before,
+.X::after
+{
+    content: '';
+    display: block;
+    width: calc(100% / (0.115rem / 1px) );
+    height: max(0.1rem, 1px);
+    background-color: currentColor;
+    letter-spacing: 0;
+    position: absolute;
+    left: 0;
+}
+.X::before
+{
+    top: 0;
+}
+.X::after
+{
+    bottom: 0;
+}
+.eyebrow .X::after
+{
+    bottom: calc(0.1rem * 2);
+}
 
 .hero__stats {
     position: relative;
     list-style: none;
     margin: 1rem 0 0;
     padding: 1.8rem 0 0;
-    display: grid;
-    grid-template-columns:repeat(3, 1fr);
+    display: flex;
+    justify-content: space-evenly;
     gap: 1.6rem;
     width: 100%;
     border-top: 1px solid rgba(255, 255, 255, .16);
@@ -2136,8 +2166,8 @@ input, select, textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 15rem;
-    margin: 1.8rem 0 1.4rem;
+    height: 24.3rem;
+    margin: -0.6rem 0;
 }
 
 /* логотипы выровнены по «чернильному» размеру: одинаковая высота и оптическая масса */
@@ -2356,32 +2386,6 @@ input, select, textarea {
     transform: scaleX(1)
 }
 
-.award__top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem
-}
-
-.award__num {
-    font-family: 'Ruda', system-ui, sans-serif;
-    font-size: 1.3rem;
-    font-weight: 600;
-    letter-spacing: .08em;
-    color: var(--c-gray-text);
-}
-
-.award__type {
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: var(--c-orange-text);
-    background: rgba(224, 173, 54, .14);
-    padding: .4rem 1rem;
-    border-radius: var(--r-pill);
-}
-
 .award__img {
     display: flex;
     align-items: center;
@@ -2396,6 +2400,10 @@ input, select, textarea {
     width: auto;
     filter: drop-shadow(0 1.6rem 2rem rgba(0, 0, 0, .22));
     transition: transform .55s var(--ease);
+}
+.award:last-child .award__img img
+{
+    filter: drop-shadow(0 1.6rem 2rem rgba(0, 0, 0, .22)) hue-rotate(14deg) brightness(1.4) contrast(0.8) saturate(0.8);
 }
 
 .award:hover .award__img img {
@@ -2420,34 +2428,6 @@ input, select, textarea {
 /* описание фиксированной высоты — разделители во всех карточках на одном уровне */
 .award p {
     min-height: calc(1.42rem * 1.5 * 8)
-}
-
-.award__rule {
-    display: block;
-    height: 1px;
-    background: var(--c-gray-light);
-    margin: 1.8rem 0 1.4rem
-}
-
-.award__stage {
-    margin-top: auto;
-    font-size: 1.2rem;
-    line-height: 1.4;
-    color: var(--c-gray-text);
-    display: flex;
-    gap: .8rem;
-    align-items: flex-start;
-    min-height: calc(1.2rem * 1.4 * 2); /* две строки — одинаковая высота подписи */
-}
-
-.award__stage::before {
-    content: '';
-    flex: 0 0 auto;
-    width: .7rem;
-    height: .7rem;
-    margin-top: .5rem;
-    border-radius: 50%;
-    background: var(--c-gold);
 }
 
 .awards__foot {
@@ -3485,7 +3465,10 @@ input, select, textarea {
 .cta__steps span {
     font-size: 1.28rem;
     line-height: 1.45;
-    color: rgba(254, 254, 254, .62)
+    color: rgba(254, 254, 254, .62);
+}
+.cta__steps span:first-child {
+    text-transform: uppercase;
 }
 
 .cta__medal {
@@ -6021,14 +6004,14 @@ a.info-row__val:hover {
     grid-column: span 2;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     gap: .4rem;
     padding: 2rem;
     border: 0;
     border-radius: var(--r-sm);
     cursor: pointer;
-    text-align: left;
+    text-align: center;
     background: linear-gradient(140deg, var(--c-gold), #c98f1d);
     color: #1C1D1F;
     transition: transform .35s var(--ease), box-shadow .35s var(--ease);
@@ -6039,15 +6022,8 @@ a.info-row__val:hover {
     box-shadow: 0 1.2rem 2.4rem -.8rem rgba(201, 143, 29, .65)
 }
 
-.gallery__more-num {
-    font-family: 'Alumni Sans', 'Arial Narrow', sans-serif;
-    font-size: 4.2rem;
-    font-weight: 700;
-    line-height: 1
-}
-
 .gallery__more-txt {
-    font-size: 1.35rem;
+    font-size: 1.8rem;
     font-weight: 600;
     line-height: 1.3
 }
