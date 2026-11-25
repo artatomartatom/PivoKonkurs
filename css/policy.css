@@ -1,0 +1,84 @@
+/* «Политика»: дополнения к общей дизайн-системе, только для этой страницы. */
+.policy-page { background: #fff; }
+.policy-page [hidden] { display: none !important; }
+.policy-page :focus-visible { outline: 3px solid var(--c-gold); outline-offset: 5px; }
+.policy-page :is(#policy-content, .policy-chapter) { scroll-margin-top: calc(var(--policy-header-h, var(--header-h)) + 2rem); }
+.policy-skip { position: fixed; left: 2rem; top: -12rem; z-index: 1000; padding: 1.5rem 2rem; background: #fff; border: 2px solid var(--c-gold); }
+.policy-skip:focus { top: 1rem; }
+.policy-page .policy-head { padding: calc(var(--policy-header-h, var(--header-h)) + 4.4rem) 0 6rem; background: radial-gradient(ellipse at 85% 60%, #f3e4bf99, transparent 50%), #fcfaf5; }
+.policy-page .policy-head::after { background-image: url('../assets/img/medal-clean.png'); width: 34rem; height: 34rem; right: max(4rem, calc((100vw - var(--wrap)) / 2 + 6rem)); top: auto; bottom: -7rem; opacity: .11; }
+.policy-head .wrap { position: relative; }
+.policy-head__eyebrow { margin-top: 3.6rem; }
+.policy-page .policy-head h1 { margin: 1.4rem 0 1.8rem; }
+.policy-page .policy-head .page-head__lead { max-width: 78rem; font-size: 1.8rem; line-height: 1.7; }
+.policy-share { padding: 3rem 0; border-bottom: 1px solid #e9e4da; background: #fff; }
+.policy-share .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; font-size: 1.3rem; }
+.policy-share .chip-link { color: #4a4b4e; }
+.policy-copy { border: 0; background: transparent; font: inherit; padding: .7rem 0; color: var(--c-orange-text); cursor: pointer; text-decoration: underline; text-underline-offset: .4rem; }
+.policy-share__status { color: var(--c-orange-text); }
+.policy-page .policy-head h1 { max-width: 100rem; font-size: 7.2rem; line-height: 1.1; }
+.policy-document { background: #fff; }
+.policy-draft { padding: 2.4rem 3rem; border: 1px solid #e3c98f; border-left: 4px solid #b48327; border-radius: .7rem; background: #fffbf1; margin-bottom: 5rem; }
+.policy-draft strong { font-size: 1.5rem; color: #785217; }
+.policy-draft p { font-size: 1.3rem; line-height: 1.8; margin-top: .8rem; color: #66625b; }
+.policy-layout { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.9fr); gap: 7rem; align-items: start; }
+.policy-toc { position: sticky; top: calc(var(--policy-header-h, var(--header-h)) + 2rem); background: #faf8f3; border: 1px solid #e9e1d2; border-radius: .8rem; padding: 2.5rem; }
+.policy-toc h2 { font-size: 3.4rem; margin-bottom: 1.7rem; }
+.policy-toc ol { list-style: none; padding: 0; margin: 0; }
+.policy-toc li + li { margin-top: 1.2rem; }
+.policy-toc a { display: block; font-size: 1.25rem; line-height: 1.7; color: var(--c-gray-text); }
+.policy-toc a:hover { color: var(--c-orange-text); text-decoration: underline; text-underline-offset: .3rem; }
+.policy-body { min-width: 0; }
+.policy-chapter + .policy-chapter { padding-top: 3.5rem; margin-top: 3.5rem; border-top: 1px solid #e6dfd2; }
+.policy-chapter h2 { font-size: 3.6rem; line-height: 1.25; margin-bottom: 2rem; }
+.policy-chapter p { font-size: 1.5rem; line-height: 1.95; color: #55585d; margin: 1.5rem 0 0; }
+.policy-chapter a { color: var(--c-orange-text); text-decoration: underline; text-underline-offset: .3rem; overflow-wrap: anywhere; }
+.policy-chapter code { font-size: .9em; overflow-wrap: anywhere; }
+.policy-download { margin-top: 4rem; padding: 2.5rem; border: 1px solid #e0d3b9; border-radius: .7rem; background: #fcfaf5; }
+.policy-download p { font-size: 1.4rem; line-height: 1.7; }
+.policy-download p span { display: block; color: var(--c-gray-text); margin-top: .6rem; }
+.policy-download > div { display: flex; flex-wrap: wrap; gap: 1rem 2.5rem; margin-top: 1.5rem; }
+.policy-file { display: inline-flex; align-items: center; min-height: 44px; font-size: 1.3rem; color: var(--c-orange-text); text-decoration: underline; text-underline-offset: .4rem; }
+@media (max-width: 1000px) {
+  .policy-layout { gap: 4rem; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); }
+  .policy-toc { position: static; }
+}
+@media (max-width: 720px) {
+  .policy-page .policy-head { padding-top: calc(var(--policy-header-h, var(--header-h)) + 3rem); }
+  .policy-page .policy-head::after { right: -4rem; opacity: .06; }
+  .policy-page .policy-head h1 { font-size: 5.8rem; }
+  .policy-page .policy-head .page-head__lead { font-size: 2rem; }
+  .policy-layout { grid-template-columns: 1fr; }
+  .policy-draft strong { font-size: 2rem; }
+  .policy-draft p, .policy-toc a { font-size: 1.9rem; }
+  .policy-toc a { padding: .6rem 0; }
+  .policy-chapter h2 { font-size: 3.8rem; }
+  .policy-chapter p { font-size: 2rem; line-height: 1.85; }
+  .policy-file, .policy-download p, .policy-share .wrap, .policy-share .chip-link { font-size: 1.9rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .policy-page *, .policy-page *::before, .policy-page *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}
+@media print {
+  @page { size: A4; margin: 18mm; }
+  html { font-size: 10pt !important; }
+  body.policy-page { background: #fff; color: #111; }
+  .policy-page :is(header, footer, .policy-skip, .policy-toc, .policy-share, .section--seo, .float-contact, .cookie, .policy-download, .crumbs, .policy-head__eyebrow) { display: none !important; }
+  .policy-page .wrap { max-width: none; width: 100%; padding: 0; }
+  .policy-page .policy-head { padding: 0 0 15pt; margin: 0; background: none; }
+  .policy-page .policy-head::after { display: none; }
+  .policy-page .policy-head h1 { font-size: 24pt; margin: 0 0 10pt; }
+  .policy-page .policy-head .page-head__lead { font-size: 10pt; }
+  .policy-page .policy-document { padding: 0; }
+  .policy-layout { display: block; }
+  .policy-draft { margin: 0 0 20pt; padding: 10pt; break-inside: avoid; }
+  .policy-draft strong { font-size: 11pt; }
+  .policy-draft p, .policy-chapter p { font-size: 10pt; line-height: 1.6; }
+  .policy-chapter h2 { font-size: 15pt; margin-bottom: 9pt; break-after: avoid; }
+  .policy-chapter + .policy-chapter { margin-top: 16pt; padding-top: 12pt; }
+  .policy-chapter p { orphans: 3; widows: 3; }
+}
+@media screen and (min-width: 1001px) {
+  .policy-document { overflow: visible; }
+  .policy-toc { max-height: calc(100dvh - var(--policy-header-h, var(--header-h)) - 4rem); overflow: auto; }
+}

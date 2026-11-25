@@ -1,0 +1,81 @@
+/* «Вопрос-ответ»: дополнения к общей дизайн-системе, только для этой страницы. */
+.faq-page { background: #fff; }
+.faq-page [hidden] { display: none !important; }
+.faq-page :focus-visible { outline: 3px solid var(--c-gold); outline-offset: 5px; }
+.faq-page :is(#questions, #materials, #registration-form, [id^="question-"], [id^="doc-"]) { scroll-margin-top: calc(var(--faq-header-h, var(--header-h)) + 2rem); }
+.faq-skip { position: fixed; left: 2rem; top: -12rem; z-index: 1000; padding: 1.5rem 2rem; background: #fff; border: 2px solid var(--c-gold); }
+.faq-skip:focus { top: 1rem; }
+.faq-page .faq-head { padding: calc(var(--faq-header-h, var(--header-h)) + 4.4rem) 0 6rem; background: radial-gradient(ellipse at 85% 60%, #f3e4bf99, transparent 50%), #fcfaf5; }
+.faq-page .faq-head::after { background-image: url('../assets/img/medal-clean.png'); width: 34rem; height: 34rem; right: max(4rem, calc((100vw - var(--wrap)) / 2 + 6rem)); top: auto; bottom: -7rem; opacity: .11; }
+.faq-head .wrap { position: relative; }
+.faq-head__eyebrow { margin-top: 3.6rem; }
+.faq-page .faq-head h1 { margin: 1.4rem 0 1.8rem; }
+.faq-page .faq-head .page-head__lead { max-width: 78rem; font-size: 1.8rem; line-height: 1.7; }
+.faq-share { padding: 3rem 0; border-bottom: 1px solid #e9e4da; background: #fff; }
+.faq-share .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; font-size: 1.3rem; }
+.faq-share .chip-link { color: #4a4b4e; }
+.faq-copy { border: 0; background: transparent; font: inherit; padding: .7rem 0; color: var(--c-orange-text); cursor: pointer; text-decoration: underline; text-underline-offset: .4rem; }
+.faq-share__status { color: var(--c-orange-text); }
+.faq-dialog { width: min(60rem, calc(100% - 32px)); max-height: calc(100dvh - 48px); overflow: auto; border: 1px solid #e0cfa9; padding: 4rem; border-radius: 1.2rem; color: var(--c-dark); background: #fffcf6; box-shadow: 0 2rem 8rem #0004; }
+.faq-dialog::backdrop { background: #17191dcc; backdrop-filter: blur(5px); }
+.faq-dialog__close { position: absolute; right: 1.5rem; top: 1.5rem; border: 0; border-radius: 50%; width: 44px; height: 44px; background: #f0e3c9; font: inherit; font-size: 30px; color: #3b3529; cursor: pointer; }
+.faq-dialog h2 { font-size: 3.8rem; line-height: 1.2; margin: 2rem 0; }
+.faq-dialog > p:not(.eyebrow), .faq-dialog > a { font-size: 1.5rem; line-height: 1.8; }
+.faq-dialog > a { display: block; width: fit-content; color: var(--c-orange-text); margin-top: 1.5rem; text-decoration: underline; overflow-wrap: anywhere; }
+.faq-nav { background: #fff; border-bottom: 1px solid #e9e4da; }
+.faq-nav .wrap { display: flex; flex-wrap: wrap; gap: .7rem 3.3rem; padding-top: 1.6rem; padding-bottom: 1.6rem; }
+.faq-nav a { color: var(--c-gray-text); font-size: 1.3rem; padding: .6rem 0; }
+.faq-nav a:hover { color: var(--c-orange-text); text-decoration: underline; text-underline-offset: .6rem; }
+.faq-page .docs { grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); }
+.faq-docs-note { font-size: 1.15rem; color: var(--c-gray-text); }
+.faq-materials .btn:disabled { opacity: .6; cursor: not-allowed; }
+.faq-docs-notice { padding: 1.8rem 2.2rem; margin-bottom: 3rem; background: #fbf6e9; border-left: 3px solid var(--c-gold); font-size: 1.3rem; line-height: 1.8; }
+.faq-docs-notice a { color: var(--c-orange-text); text-decoration: underline; overflow-wrap: anywhere; }
+.faq-document { width: 100%; border: 0; background: none; text-align: left; font: inherit; cursor: pointer; }
+.faq-document .doc__dl { font-size: 2.2rem; }
+@media (max-width: 720px) {
+  .faq-page .faq-head { padding-top: calc(var(--faq-header-h, var(--header-h)) + 3rem); }
+  .faq-page .faq-head::after { right: -4rem; opacity: .06; }
+  .faq-page .faq-head .page-head__lead { font-size: 2rem; }
+  .faq-nav a { font-size: 1.8rem; min-height: 44px; display: flex; align-items: center; }
+  .faq-page .docs { grid-template-columns: 1fr; }
+  .faq-docs-notice, .faq-docs-note { font-size: 1.8rem; }
+  .faq-share .wrap, .faq-share .chip-link { font-size: 1.8rem; }
+  .faq-dialog > p:not(.eyebrow), .faq-dialog > a { font-size: 2rem; }
+  .faq-dialog .eyebrow { margin-top: 5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .faq-page *, .faq-page *::before, .faq-page *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}
+.faq-page .faq-head h1 { max-width: 100%; }
+.faq-section { background: #fff; }
+.faq-layout { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.65fr); gap: 7rem; align-items: start; }
+.faq-intro h2 { margin: 2rem 0; }
+.faq-intro > p:not(.eyebrow) { font-size: 1.5rem; line-height: 1.8; margin: 0 0 2.5rem; }
+.faq-intro__note { display: block; margin-top: 1.3rem; color: var(--c-gray-text); font-size: 1.1rem; line-height: 1.7; }
+.faq-list { border-top: 2px solid #b68c3b; }
+.faq-item { border-bottom: 1px solid #e0d9cb; }
+.faq-item summary { display: flex; align-items: center; justify-content: space-between; gap: 2.5rem; padding: 2.5rem 0; list-style: none; cursor: pointer; color: var(--c-dark); font-size: 1.7rem; font-weight: 600; line-height: 1.5; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary:hover, .faq-item[open] summary { color: var(--c-orange-text); }
+.faq-item__icon { flex: 0 0 28px; width: 28px; height: 28px; border: 1px solid #dcc9a2; border-radius: 50%; position: relative; }
+.faq-item__icon::before, .faq-item__icon::after { content: ''; position: absolute; background: currentColor; left: 8px; right: 8px; top: 12px; height: 2px; }
+.faq-item__icon::after { transform: rotate(90deg); }
+.faq-item[open] .faq-item__icon::after { display: none; }
+.faq-answer { padding: 0 4rem 2.5rem 0; font-size: 1.5rem; line-height: 1.85; color: var(--c-gray-text); }
+.faq-answer a { color: var(--c-orange-text); text-decoration: underline; text-underline-offset: .3rem; overflow-wrap: anywhere; }
+@media (max-width: 900px) {
+  .faq-layout { grid-template-columns: 1fr; gap: 4rem; }
+  .faq-intro > p:not(.eyebrow) { max-width: 48rem; }
+}
+@media (max-width: 720px) {
+  .faq-page .faq-head h1 { font-size: 5.8rem; }
+  .faq-intro > p:not(.eyebrow), .faq-answer { font-size: 2rem; }
+  .faq-intro__note { font-size: 1.7rem; }
+  .faq-item summary { font-size: 2.2rem; min-height: 60px; }
+  .faq-answer { padding-right: 0; }
+  .faq-page .doc__name { font-size: 2rem; }
+  .faq-page .doc__meta { font-size: 1.6rem; }
+}
+/* Текст ответов не наследует уменьшенный размер общих абзацев темы. */
+.faq-answer p { font-size: inherit; line-height: inherit; }

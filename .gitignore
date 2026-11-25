@@ -3,3 +3,8 @@ node_modules/
 .DS_Store
 dist/
 build/
+# Local tooling and browser test artifacts
+.cache/
+.venv/
+test-results/
+playwright-report/
