@@ -53,7 +53,7 @@
     var next = slider.querySelector('[data-next]');
     var index = 0;
     var timer = null;
-    var AUTOPLAY = 180000;
+    var AUTOPLAY = 15000;
 
     slides.forEach(function (_, i) {
       var b = document.createElement('button');
