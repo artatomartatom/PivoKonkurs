@@ -1,0 +1,117 @@
+/* «Экспертное жюри»: тема главной и страницы «О конкурсе».
+   Стили ограничены .jury-page и компонентами этой страницы. */
+.jury-page { background: #fff; }
+.jury-page [hidden] { display: none !important; }
+.jury-page :focus-visible { outline: 3px solid var(--c-gold); outline-offset: 5px; }
+.jury-skip { position: fixed; left: 2rem; top: -12rem; z-index: 1000; padding: 1.5rem 2rem; color: #222; background: #fff; border: 2px solid var(--c-gold); }
+.jury-skip:focus { top: 1rem; }
+.jury-page .jury-head { padding: calc(var(--jury-header-h, var(--header-h)) + 4.4rem) 0 5.2rem; background: radial-gradient(ellipse at 85% 60%, #f3e4bf99, transparent 50%), #fcfaf5; }
+.jury-page .jury-head::after { background-image: url('../assets/img/medal-clean.png'); width: 34rem; height: 34rem; right: max(4rem, calc((100vw - var(--wrap)) / 2 + 6rem)); top: auto; bottom: -7rem; opacity: .11; }
+.jury-head .wrap { position: relative; }
+.jury-head__eyebrow { margin-top: 3.6rem; }
+.jury-page .jury-head h1 { margin: 1.4rem 0 1.8rem; max-width: 95rem; }
+.jury-page .jury-head .page-head__lead { max-width: 78rem; font-size: 1.8rem; line-height: 1.7; }
+.jury-head__facts { display: flex; flex-wrap: wrap; gap: 1rem 2.5rem; margin-top: 3rem; font-size: 1.2rem; text-transform: uppercase; color: var(--c-gray-text); }
+.jury-head__facts span + span { border-left: 1px solid #dcd1ba; padding-left: 2.5rem; }
+.jury-head__facts b { color: var(--c-orange-text); font-size: 1.7rem; margin-right: .4rem; }
+.jury-head__script { position: absolute; right: 0; bottom: 1.5rem; font: 400 4.6rem/1.2 'Caveat', cursive; color: var(--c-orange-text); transform: rotate(-5deg); }
+.jury-intro { background: #fff; }
+.jury-intro__grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 7rem; align-items: start; }
+.jury-intro__copy h2 { margin: 1.8rem 0 3rem; }
+.jury-intro__copy > p:not(.eyebrow) { font-size: 1.6rem; line-height: 1.85; }
+.jury-intro__copy > h3 { font-size: 1.6rem; line-height: 1.6; margin: 2.4rem 0 1.4rem; }
+.jury-qualifications { list-style: none; padding: 0; margin: 0; }
+.jury-qualifications li { position: relative; padding: .6rem 0 .6rem 2.2rem; font-size: 1.4rem; line-height: 1.8; }
+.jury-qualifications li::before { content: ''; position: absolute; left: 0; top: 1.65rem; width: .6rem; height: .6rem; background: var(--c-gold); border-radius: 50%; }
+.jury-intro__copy > .jury-chair { margin-top: 2.5rem; padding: 2rem 2.4rem; border-left: 3px solid var(--c-gold); background: #faf7ef; font-size: 1.4rem; }
+.jury-chair a { color: var(--c-orange-text); text-decoration: underline; text-underline-offset: .3rem; }
+.jury-directory { padding: 3rem; border: 1px solid #e8e1d5; border-radius: 1.2rem; background: #faf9f6; }
+.jury-directory > .eyebrow { font-size: 1.1rem; letter-spacing: .1em; }
+.jury-directory h2 { font-size: 3.6rem; margin: 1.5rem 0 2rem; }
+.jury-directory__item { display: flex; align-items: center; gap: 1.5rem; border-top: 1px solid #e2dbce; padding: 1.8rem 0; }
+.jury-directory__item:last-child { padding-bottom: 0; }
+.jury-directory__item > img, .jury-directory__placeholder { width: 5.6rem; height: 7rem; flex-shrink: 0; border-radius: .5rem; object-fit: cover; object-position: center 12%; background: #e8e1d5; }
+.jury-directory__placeholder { display: grid; place-items: center; color: #9b8a68; }
+.jury-directory__placeholder svg { height: 70%; }
+.jury-directory__text { flex: 1; min-width: 0; }
+.jury-directory__text strong { display: block; font-size: 1.35rem; line-height: 1.55; font-weight: 600; }
+.jury-directory__text > span { display: block; margin-top: .5rem; font-size: 1.1rem; line-height: 1.6; color: var(--c-gray-text); }
+.jury-directory__arrow { font-size: 2rem; color: var(--c-orange-text); transition: transform .2s; }
+.jury-directory__item:hover .jury-directory__text strong { color: var(--c-orange-text); }
+.jury-directory__item:hover .jury-directory__arrow { transform: translate(2px, 2px); }
+.expert-profile { border-top: 1px solid #eae4d9; background: #fff; scroll-margin-top: calc(var(--jury-header-h, var(--header-h)) + 2rem); }
+.expert-profile:nth-child(even) { background: #faf9f6; }
+.expert-profile__grid { display: grid; grid-template-columns: minmax(0, 30rem) minmax(0, 1fr); gap: 7rem; align-items: start; }
+.expert-portrait { position: sticky; top: calc(var(--jury-header-h, var(--header-h)) + 2rem); }
+.expert-portrait__image { position: relative; overflow: hidden; border-radius: 1rem; background: #e4ddce; box-shadow: 0 1.2rem 3rem -1.5rem #28231c33; }
+.expert-portrait__image > img { width: 100%; height: auto; aspect-ratio: 4/5; object-fit: cover; object-position: center 12%; }
+.expert-portrait__number { position: absolute; left: 1.6rem; bottom: 1.6rem; padding: .6rem 1rem; border: 1px solid #ffffff66; border-radius: .4rem; color: #fff; background: #22262cd9; font-size: 1.1rem; letter-spacing: .12em; }
+.expert-portrait__role { font-size: 1.3rem; line-height: 1.7; color: var(--c-orange-text); padding: 2rem 0; border-bottom: 1px solid #dfd7c7; }
+.expert-back { display: inline-block; padding: 1.4rem 0; color: var(--c-gray-text); font-size: 1.2rem; }
+.expert-back:hover { color: var(--c-orange-text); text-decoration: underline; text-underline-offset: .4rem; }
+.expert-profile__role { font-size: 1.15rem; letter-spacing: .09em; line-height: 1.8; text-transform: uppercase; color: var(--c-orange-text); margin-bottom: 1.5rem; }
+.expert-profile__content > h2 { font-size: 5.6rem; line-height: 1.06; margin-bottom: 3.4rem; }
+.expert-profile__content > p:not(.expert-profile__role), .expert-block > p { font-size: 1.45rem; line-height: 1.9; margin-top: 1.5rem; }
+.expert-block { margin-top: 3.5rem; }
+.expert-block h3 { font-size: 1.65rem; line-height: 1.6; margin-bottom: 1.4rem; }
+.expert-timeline { margin: 0; }
+.expert-timeline > div { display: grid; grid-template-columns: 12rem minmax(0, 1fr); gap: 2rem; padding: 1.5rem 0; border-top: 1px solid #e7e0d4; }
+.expert-timeline dt { font-size: 1.25rem; font-weight: 600; line-height: 1.8; color: var(--c-orange-text); }
+.expert-timeline dd { margin: 0; font-size: 1.4rem; line-height: 1.8; }
+.expert-portrait__placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; aspect-ratio: 4/5; gap: 2rem; background: radial-gradient(ellipse at 50% 20%, #faf6ed, transparent 80%), #e9e1d2; color: #a39479; }
+.expert-portrait__placeholder svg { width: 40%; height: auto; }
+.expert-portrait__placeholder > span { font-size: 1.2rem; }
+.expert-pending { padding: 3rem; background: #fffdf8; border: 1px solid #e1d3b8; border-radius: 1rem; }
+.expert-pending__label { display: inline-block; background: #f5e8cd; border-radius: 3rem; padding: .7rem 1.3rem; color: #8d6220; font-size: 1.15rem; }
+.expert-pending p { margin-top: 1.5rem; font-size: 1.45rem; line-height: 1.8; }
+.jury-share { padding: 3rem 0; border-bottom: 1px solid #e9e4da; background: #fff; }
+.jury-share .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; font-size: 1.3rem; }
+.jury-share .chip-link { color: #4a4b4e; }
+.jury-copy { border: 0; background: transparent; font: inherit; padding: .7rem 0; color: var(--c-orange-text); cursor: pointer; text-decoration: underline; text-underline-offset: .4rem; }
+.jury-share__status { color: var(--c-orange-text); }
+@media (max-width: 1100px) {
+  .jury-intro__grid { gap: 4rem; }
+  .jury-head__script { font-size: 3.6rem; bottom: -1rem; }
+  .expert-profile__grid { grid-template-columns: 27rem minmax(0, 1fr); gap: 4rem; }
+  .expert-timeline > div { grid-template-columns: 11rem minmax(0, 1fr); }
+}
+@media (max-width: 720px) {
+  .jury-page .jury-head { padding-top: calc(var(--jury-header-h, var(--header-h)) + 3rem); }
+  .jury-page .jury-head::after { right: -4rem; opacity: .06; }
+  .jury-page .jury-head .page-head__lead { font-size: 2rem; }
+  .jury-head__script { display: none; }
+  .jury-head__facts { font-size: 1.6rem; }
+  .jury-intro__grid { grid-template-columns: 1fr; gap: 4.5rem; }
+  .jury-intro__copy > p:not(.eyebrow), .jury-intro__copy > h3 { font-size: 2rem; line-height: 1.8; }
+  .jury-qualifications li { font-size: 1.9rem; padding-left: 2.5rem; }
+  .jury-qualifications li::before { top: 2rem; }
+  .jury-directory { padding: 3rem; }
+  .jury-directory__item { gap: 2rem; padding: 2rem 0; }
+  .jury-directory__item > img, .jury-directory__placeholder { width: 7rem; height: 8.75rem; }
+  .jury-directory__text strong { font-size: 2rem; }
+  .jury-directory__text > span { font-size: 1.7rem; }
+  .jury-directory > .eyebrow { font-size: 1.5rem; }
+  .jury-directory__arrow { font-size: 2.6rem; }
+  .expert-profile__grid { grid-template-columns: 1fr; gap: 3.5rem; }
+  .expert-portrait { position: static; max-width: 40rem; }
+  .expert-portrait__role { font-size: 1.8rem; }
+  .expert-portrait__number, .expert-back { font-size: 1.7rem; }
+  .expert-portrait__placeholder > span { font-size: 1.8rem; }
+  .expert-profile__role { font-size: 1.6rem; }
+  .expert-profile__content > h2 { font-size: 5.6rem; }
+  .expert-profile__content > p:not(.expert-profile__role), .expert-block > p, .expert-pending p { font-size: 2rem; line-height: 1.8; }
+  .expert-block h3 { font-size: 2.3rem; }
+  .expert-timeline > div { grid-template-columns: 12rem minmax(0, 1fr); gap: 2rem; padding: 2rem 0; }
+  .expert-timeline dt { font-size: 1.75rem; }
+  .expert-timeline dd { font-size: 1.9rem; }
+  .expert-pending__label { font-size: 1.7rem; }
+  .jury-share .wrap, .jury-share .chip-link { font-size: 1.8rem; }
+}
+@media (max-width: 420px) {
+  .expert-timeline > div { grid-template-columns: 1fr; gap: .6rem; }
+  .expert-timeline dt { font-size: 1.85rem; }
+  .expert-portrait { max-width: 36rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .jury-page *, .jury-page *::before, .jury-page *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}
